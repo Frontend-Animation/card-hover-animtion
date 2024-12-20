@@ -1,0 +1,135 @@
+.services-area .services-card,
+.services-area .services-card * {
+    box-sizing: border-box;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: linear;
+    transition-duration: 200ms;
+    cursor: pointer;
+}
+.services-area .services-card {
+    background: #f3f3f3;
+    border-radius: 14px;
+    width: 401px;
+    height: 186px;
+    padding: 0 2.5rem;
+    display: flex;
+    align-items: center;
+}
+.services-area .services-card:hover {
+        background: #ffffff;
+        box-shadow: 0px 4px 12px 0px rgba(47, 47, 47, 0.15);
+}
+.services-area .services-card:hover .services-card-content.show {
+    height: auto;
+    display: block;
+    transition: all linear 1s;
+}
+.services-area .services-card .services-card-image {
+    width: 48px;
+    height: 48px;
+    overflow: hidden;
+}
+.services-area .services-card .services-card-title {
+    color: #2f2f2f;
+    text-align: left;
+    font-family: "Mulish-ExtraBold", sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    padding: .3rem 0 0 0;
+}
+.services-area .services-card .services-card-content {
+    color: #515151;
+    text-align: left;
+    font-family: "Akatab-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: .7rem 0 0 0;
+    width: 295px;
+}
+.services-area .services-card .services-card-content {
+    color: #515151;
+    text-align: left;
+    font-family: "Akatab-Medium", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    padding: .7rem 0 0 0;
+    width: 295px;
+    transition: all linear 1s;
+}
+.services-area .services-card .services-card-content.hidden {
+    height: 0;
+    display: none;
+    transition: all linear 1s;
+}
+
+
+
+.process-cycle-area .process-cycle-card,
+.process-cycle-area .process-cycle-card * {
+    box-sizing: border-box;
+}
+.process-cycle-area .process-cycle-card {
+    background: #f3f3f3;
+    border-radius: 16px;
+    width: 214px;
+    height: 182px;
+    padding: 1rem;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 150ms;
+    transition-timing-function: linear;
+    transition-duration: 150ms;
+    cursor: pointer;
+}
+.process-cycle-area .process-cycle-card:hover {
+    background: #ffffff;
+    box-shadow: 0px 4px 12px 0px rgba(47, 47, 47, 0.15);
+}
+.process-cycle-area .process-cycle-card:hover .process-cycle-card-circle {
+    background: #f3f3f3;
+}
+.process-cycle-area .process-cycle-card:hover .process-cycle-card-content.show {
+    display: flex;
+}
+.process-cycle-area .process-cycle-card:hover .process-cycle-card-title.hover-card-title {
+    padding: .5rem 0 0 0;
+}
+.process-cycle-area .process-cycle-card .process-cycle-card-circle {
+    background: #ffffff;
+    border-radius: 50%;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.process-cycle-area .process-cycle-card .process-cycle-card-circle img {
+    width: 40px;
+    height: 40px;
+}
+.process-cycle-area .process-cycle-card .process-cycle-card-title {
+    color: #2f2f2f;
+    text-align: center;
+    font-family: "Mulish-ExtraBold", sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+}
+.process-cycle-area .process-cycle-card .process-cycle-card-title.card-title {
+    padding: 1.5rem 0 0 0;
+}
+.process-cycle-area .process-cycle-card .process-cycle-card-content {
+    color: #515151;
+    text-align: center;
+    font-family: "Akatab-Medium", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    padding: .5rem 0 0 0;
+}
+
+.process-cycle-area .process-cycle-card .process-cycle-card-content.hidden {
+    display: none;
+}
+
+
