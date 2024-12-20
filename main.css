@@ -4,7 +4,7 @@
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-timing-function: linear;
-    transition-duration: 200ms;
+    transition-duration: 210ms;
     cursor: pointer;
 }
 .services-area .services-card {
@@ -12,18 +12,18 @@
     border-radius: 14px;
     width: 401px;
     height: 186px;
-    padding: 0 2.5rem;
-    display: flex;
-    align-items: center;
+    padding: 3rem 2.5rem;
 }
 .services-area .services-card:hover {
         background: #ffffff;
-        box-shadow: 0px 4px 12px 0px rgba(47, 47, 47, 0.15);
+    box-shadow: 0px 4px 12px 0px rgba(47, 47, 47, 0.15);
+    padding: 1.7rem 2.5rem;
 }
 .services-area .services-card:hover .services-card-content.show {
-    height: auto;
+    transition: opacity 300ms;
+    animation: fade-in 300ms;
+    opacity: 1;
     display: block;
-    transition: all linear 1s;
 }
 .services-area .services-card .services-card-image {
     width: 48px;
@@ -47,20 +47,11 @@
     padding: .7rem 0 0 0;
     width: 295px;
 }
-.services-area .services-card .services-card-content {
-    color: #515151;
-    text-align: left;
-    font-family: "Akatab-Medium", sans-serif;
-    font-size: 14px;
-    font-weight: 500;
-    padding: .7rem 0 0 0;
-    width: 295px;
-    transition: all linear 1s;
-}
 .services-area .services-card .services-card-content.hidden {
-    height: 0;
+    transition: opacity 200ms;
+    animation: fade-out 200ms;
+    opacity: 0;
     display: none;
-    transition: all linear 1s;
 }
 
 
@@ -81,6 +72,7 @@
     transition-timing-function: linear;
     transition-duration: 150ms;
     cursor: pointer;
+    position: relative;
 }
 .process-cycle-area .process-cycle-card:hover {
     background: #ffffff;
@@ -88,12 +80,22 @@
 }
 .process-cycle-area .process-cycle-card:hover .process-cycle-card-circle {
     background: #f3f3f3;
-}
-.process-cycle-area .process-cycle-card:hover .process-cycle-card-content.show {
-    display: flex;
+    transition: all linear .5s;
 }
 .process-cycle-area .process-cycle-card:hover .process-cycle-card-title.hover-card-title {
+    transition: padding 300ms;
+    animation: procress-title-bounce-to-top 300ms;
     padding: .5rem 0 0 0;
+}
+.process-cycle-area .process-cycle-card:hover .process-cycle-card-content.show {
+    transition: opacity 300ms;
+    animation: fade-in 300ms;
+    opacity: 1; 
+    display: flex;
+}
+.process-cycle-area .process-cycle-card:hover .process-cycle-card-number {
+    background: #66b3ff;
+    color: #ffffff;
 }
 .process-cycle-area .process-cycle-card .process-cycle-card-circle {
     background: #ffffff;
@@ -117,6 +119,8 @@
     font-weight: 800;
 }
 .process-cycle-area .process-cycle-card .process-cycle-card-title.card-title {
+    transition: padding 300ms;
+    animation: procress-title-bounce-to-bottom 300ms;
     padding: 1.5rem 0 0 0;
 }
 .process-cycle-area .process-cycle-card .process-cycle-card-content {
@@ -129,7 +133,50 @@
 }
 
 .process-cycle-area .process-cycle-card .process-cycle-card-content.hidden {
+    transition: opacity 150ms;
+    animation: fade-out 150ms;
+    opacity: 0;
     display: none;
+}
+@keyframes fade-in {
+    from { 
+        opacity: 0;
+        display: none;
+    }
+}
+@keyframes fade-out {
+    from { 
+        opacity: 1;
+        display: flex;
+    }
+}
+@keyframes procress-title-bounce-to-top {
+    from_padding { 
+        padding: 1.5rem 0 0 0;
+    }
+}
+@keyframes procress-title-bounce-to-bottom {
+    from_padding { 
+        padding: .5rem 0 0 0;
+    }
+}
+
+.process-cycle-area .process-cycle-card .process-cycle-card-number {
+    background: #e3e3e3;
+    border-radius: 6px;
+    width: 22px;
+    height: 22px;
+    color: #515151;
+    font-family: "Rajdhani-Bold", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    transition: background 250ms;
 }
 
 
